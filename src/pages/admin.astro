@@ -18,7 +18,16 @@ const config = {
   logo_url: "https://nebulix.unfolding.io/logo.svg",
   local_backend: true,
   backend: {
-    name: "test-repo",
+    name: 'github',
+		repo: '/<wideangleportfolio>',
+		auth_type: 'pkce', // Required for pkce
+		app_id: '43473455', // Application ID from your GitLab settings
+		commit_messages: {
+			create: 'Create {{collection}} "{{slug}}"',
+			update: 'Update {{collection}} "{{slug}}"',
+			delete: 'Delete {{collection}} "{{slug}}"',
+			uploadMedia: 'Upload "{{path}}"',
+			deleteMedia: 'Delete "{{path}}"'
   },
   search: "true",
   media_folder: "src/assets",
