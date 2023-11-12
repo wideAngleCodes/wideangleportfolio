@@ -14,150 +14,140 @@ pubDate: 2023-11-05T12:18:03.122+02:00
 thumbnail: /src/assets/database_dms.png
 ---
 
-## Clone this repo or deploy to netlify
+## Using Github - a technical documentationoy to netlify
 
-Easily deploy this theme to Netlify with a single click.
+Easily deploy and manage your project work via Github's untouched usability
 
-| [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/unfolding-io/nebulix#BLOG_SLUG=blog&PORTFOLIO_SLUG=work&SHOP_SLUG=shop&MENU_SLUG=menu&WEBSITE_LANGUAGE=en&CURRENCY=USD&UNITS=metric&NODE_VERSION=18) | [![GitHub Repo stars](https://img.shields.io/github/stars/unfolding-io/nebulix?logo=github)](https://github.com/unfolding-io/nebulix) |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+## What is Git? What is Github?
 
-## 1. Setting up the .env file
+Git is a version control system that manages and keeps track of your code. GitHub, on the other hand, is a service that let you host, share, and manage your code files on the internet.
 
-rename the `env.txt` to `.env` and fill in your details
+GitHub uses Git underneath, and lets you manage your Git repositories or folders easily on its platform.
 
-```ENV
-BLOG_SLUG=blog
-PORTFOLIO_SLUG=work
-SHOP_SLUG=shop
-MENU_SLUG=menu
-WEBSITE_LANGUAGE=en
-CURRENCY=USD
-UNITS=metric
-SNIPCART_KEY=<your-snipcart-public-key>
-NEWSLETTER_PROVIDER=mailchimp
-MAILCHIMP_API_KEY=XXXXXXXXXXXXXXXX-us21
-MAILCHIMP_SERVER_PREFIX=us21
-MAILCHIMP_LIST_ID=XXXXXXXXX
-NODE_VERSION=18
+So Git is the actual version control system and GitHub is the platform where you host your code.
 
-FROM_EMAIL_ADDRESS=test@email.com
-TO_EMAIL_ADDRESS=test@email.com
+### 1. Install Git
 
-MAILGUN_API_KEY=XXXXXXXXX
-MAILGUN_DOMAIN=XXXXXXXXX
-MAILGUN_API_URL=https://api.eu.mailgun.net
+Git comes preinstalled in some Macs and Linux-based systems, but you can always check if you have Git installed in your machine by typing `git version` in your terminal. You can use the Command Prompt to do this.
 
-POSTMARK_SERVER_TOKEN=XXXXXXXXX
 
-SLACK_CHANNEL_ID=XXXXXXXXX
-SLACK_TOKEN=XXXXXXXXX
-```
 
-### 2. Configure your Static CMS Backend
+### 2. Create a Github Account
 
-Navigate to `src/pages/admin.astro` and provide your Git repository details. You can find a list of all supported Git backends at:
-[https://www.staticcms.org/docs/backends-overview](https://www.staticcms.org/docs/backends-overview)
+To create an account on GitHub, you will be asked for some personal information like name, confirm your email, set a username and password, and your account should be set up in minutes.
 
-**_Gitlab Example:_**
+### 3. Connect your GitHub account to your Git account.
+
+You'll do this from your terminal.
+
+To set your Git username, type this in your terminal:
 
 ```javascript
 
-const config = {
-	locale: lang,
-	site_url: url,
-	logo_url: 'https://nebulix.unfolding.io/nebulix-logo.svg',
-	local_backend: true,
-	backend: {
-		name: 'gitlab',
-		repo: '/<your-gitlab-repo>',
-		auth_type: 'pkce', // Required for pkce
-		app_id: 'xxxx', // Application ID from your GitLab settings
-		commit_messages: {
-			create: 'Create {{collection}} "{{slug}}"',
-			update: 'Update {{collection}} "{{slug}}"',
-			delete: 'Delete {{collection}} "{{slug}}"',
-			uploadMedia: 'Upload "{{path}}"',
-			deleteMedia: 'Delete "{{path}}"'
-		}
-	},
-	search: 'true',
-    ....
-}
+git config --global user.name "John Doe"
 
 ```
 
-### 3. Add your site to the astro config
+To confirm that you have set your Git username correctly, type this:
 
 ```javascript
 
-export default defineConfig({
-	site: 'https://your-website.com',
-    ....
+git config --global user.name
 
 ```
+You should have "John Doe" as the output.
 
-### 4. Install dependencies
+To set your Git email, type this in your terminal:
 
-```bash
-npm install
+```javascript
+
+git config --global user.email "youremail@gmail.com"
+
 ```
+To confirm that you have set your Git email correctly, type this:
 
-### 🛠️ 5. Start Development server
+```javascript
 
-```bash
-npm run dev
+git config --global user.email
+
 ```
+You should have "youremail@gmail.com" as the output.
 
-If you wish to engage the local backend:
+You will be asked to authenticate your GitHub account, so just sign in with the same email to confirm.
 
-```bash
-npm run cms-proxy-server
-```
+### 4. Create and edit your code files locally
 
-Now you can open Static CMS on http://localhost:4321/admin/
+![Editing code locally](/src/assets/github_article_step4.png)
 
-## ❌ Removing Collections
+### 5. Create and edit your code files locally
 
-If your cosmic journey excludes a blog, portfolio, shop, or restaurant menu, simply remove the corresponding documents from the `**src/content**`. Additionally, erase the page templates from `**src/pages**` .
 
-## 🛸 Commands
+Click the + sign at the top right corner to create a new repository. Repositories are like your code folders online.
 
-All commands are run from the root of the project, from a terminal:
+Followingly, you will be prompted to this page:
 
-| Command                    | Action                                           |
-| -------------------------- | ------------------------------------------------ |
-| `npm install`              | Installs dependencies                            |
-| `npm run dev`              | Starts local dev server at `localhost:4321`      |
-| `npm run cms-proxy-server` | Starts Staticcms proxy server for local-backend  |
-| `npm run build`            | Build your production site to `./dist/`          |
-| `npm run preview`          | Preview your build locally, before deploying     |
-| `npm run astro ...`        | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`  | Get help using the Astro CL                      |
+![Editing code locally](/src/assets/github_article_step5_1.png)
 
-## 👀 Want to learn more about Astro?
+![Editing code locally](/src/assets/github_article_step5_2.png)
 
-Check out [Astro documentation](https://docs.astro.build) or jump into Astro's [Discord server](https://astro.build/chat).
+Name your repository and give it a description (this is optional).
 
-## 📚 Tech Stack
+Click the "Create repository" button to create the repository. You will be prompted to this page:
 
-Astro, MDX, Vue, TailwindCSS, Pagefind, Snipcart
+![Editing code locally](/src/assets/github_article_step6.png)
 
-## 🛟 Support
+### 6. Push your local code to GitHub
+You can use the code editor built-in terminal to use Git to push your code to GitHub. Click `ctrl` + `shift` + `'` to open the terminal in VSCode. Input the commands below one after the other in your terminal. Press the `Enter` key to proceed after every input.
 
-If you encounter any issues or bugs, we encourage you to open an issue in the repository. To help us quickly address the problem, please provide detailed information about the bug and steps to reproduce it.
+![Editing code locally](/src/assets/github_article_step6_2.png)
 
-## 👑 Premium Support
+`echo "# sample-code" >> README.md`
 
-For those seeking priority assistance, we offer premium support services. Do you need support, custom intergrations, design, or development? Feel free to reach out to me by email at [hello@unfolding.io.](mailto:hello@unfolding.io.) find me on [UpWork](https://www.upwork.com/freelancers/~01dcde6b3915c74c30) Im here to help!
+`git init`
 
-## ☕️ Buy me a coffee
+`git add .`
 
-Want to power my late night coding sessions? [Buy me a coffee](https://nebulix.unfolding.io/shop/buy-me-a-coffee/)
+`git commit -m "first commit"`
 
-## 📝 License
+`git branch -M main`
 
-Want to get rid of the attribution? Simply [purchase a license](https://nebulix.unfolding.io/shop/nebulix-license/) and you're good to go.
+`git remote add origin https://github.com/johndoe/sample-code.git`
 
-## 🚕 Roadmap
+`git push -u origin main`
 
-As we journey towards v1.0, our path includes enriching the page builder with a diverse array of new blocks, upgrading dependencies to ensure optimal performance, and introducing exciting features. We're eager to hear from you! If you have any feature requests, please feel free to reach out and let us know.
+Note that we have `git add README.md` in the repository on GitHub. But here we have used `git add .`, which allows Git to add all other code files except of the `README.md` file.  This `README.md` file will be created by `echo "# sample-code" >> README.md`. Therefore, if you have created any files in your local folder, you need to use `git add .` to add all these files.
+
+Take note that `git remote add origin https://github.com/johndoe/sample-code.git` will contain the link to your own repository and it will have have the name of your GitHub account.
+
+
+
+## Common Git commands to know
+
+Among hundreds of Git commands we can use in the terminal, focusing on some of the most popular ones is a good start.
+
+Here they are:
+
+`git init` lets us initialize Git in our folder.
+
+`git add Readme.md` lets us add the Readme file, while `git add .` lets us add all files in the present folder.
+
+`git commit` stores the added files. Using `-m` for the commit message text, followed by the actual message.
+
+`git branch` creates a new branch which is a new version of a repository. `-M` to move the name to `main`.
+
+`git remote add origin` finally connects our local folder to the repository on GitHub. It is followed by the repository's link.
+
+`git push -u origin main` pushes the code to GitHub. The `-u` flag creates a tracking reference for the branch, and `origin main` puts the code in the main branch.
+
+
+## Further resources to learn Git and GitHub
+
+Here are some helpful courses and articles supporting you in learning Git and GitHub in more detail:
+
+- [Git and GitHub Tutorial – Version Control for Beginners](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
+
+- [Basic Git Commands – How to Use Git in a Real Project](https://www.freecodecamp.org/news/how-to-use-basic-git-and-github-commands/)
+
+- [An introduction to Git: what it is, and how to use it](https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/)
+
+- [About GitHub](https://github.com/about)
