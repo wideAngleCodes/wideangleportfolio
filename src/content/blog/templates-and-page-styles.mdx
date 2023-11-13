@@ -2,8 +2,7 @@
 tag:
   - Docs
 title: How quantum computers could reinvent the energy sector
-description: Explore Nebulix documentation page on customizing your web
-  templates, from layout options to collection styles and more
+description: My view on the potential of quantum computing on renewables and oil & gas
 intro: My view on the potential of quantum computing on renewables and oil & gas
 style:
   template: split
@@ -15,58 +14,111 @@ style:
 pubDate: 2023-11-05T12:14:12.256+02:00
 thumbnail: /src/assets/quantum_computing_clipart.png
 ---
-## Page Styles
 
-### Overview
+<br></br>
+#### The day is coming when quantum computerswill assist sciencie, as well as the energy sector, solve complex, real-world problems that are proving intractable to classical computing.
+<br></br>
 
-Customizing your website's appearance is a breeze with our versatile page styles. Whether you're working with pages, projects, posts, or products, you have the flexibility to choose templates for both archive and item pages. This allows you to create a unique look for each blog tag or product category. Let's dive into the available options:
+Many important problems related to how Earth’s climate works, as well as how we can produce and use energy more efficiently, require extraordinarily complex calculations to address them. Simulating the nuanced effects of ever-shifting clouds on climate fits into this category, as does evaluating a vast array of materials to optimize photovoltaic production or energy storage.
 
-### Split Template
+Such problems are becoming increasingly difficult to solve with classical computers running programs based on binary codes, especially as the scale of the necessary computations grows. For this reason, many problems are tackled using models that rely on approximations (e.g., parameterizations of climate-influencing processes like cloud formation or climate-influenced phenomena like hurricanes) to reduce computational expense. The trade-off for this capability, however, is that these models are not as precise as we’d like them to be. And even with these approximations, supercomputers are approaching the limits of conventional computational power. So where can we turn to keep making progress on complex, but pressing, scientific problems?
 
-The Split template features a sticky header on the left side, with content displayed on the right. It's a great choice for a modern, dynamic layout.
+Recently, researchers have identified potential high-impact applications of quantum computing technologies, focusing, for example, on their use in research related to climate change, renewable energy <u>[[Giani and Eldredge, 2021]](https://link.springer.com/article/10.1007/s42979-021-00786-3)</u>, and the development of optimized energy generation and storage solutions <u>[[Paudel et al., 2022]](https://pubs.acs.org/doi/10.1021/acsengineeringau.1c00033)</u>.
 
-### Full Template
+<br></br>
+### The Basics of Quantum Computing
 
-Opt for the Full template if you prefer a full-width design. With this template, you gain access to additional customization options, including header templates, container sizes, and card templates.
+Since the 1960s, semiconductor transistors, the building blocks of logic gates and modern computers, have become smaller and faster, enabling incredible increases in computer power. In 1965, Gordon Moore observed that the sizes of new transistors that were being developed were shrinking so fast that with each passing year, twice as many could fit onto a microchip [Moore, 1965]. He also forecasted that this trend—later revised to suggest a doubling every 2 years—would continue for some time into the future (Figure 1). However, modern computers are now meeting the limit of this expansion as new transistors are so small (roughly 5 nanometers) that undesirable <u>[quantum effects](https://semiengineering.com/quantum-effects-at-7-5nm/)</u> (e.g., tunneling), which alter the predictability of semiconductor behavior, are becoming unavoidable.
 
-### Container Size
+![Basics of Quantum Computing](/src/assets/quantum_article_1.png)
+_<small>Fig. 1. A plot of advances in computer processing (represented as calculations per second per $1,000) over time, from punch cards to integrated circuits, illustrates Moore’s law.</small>_
 
-Control the width of your content container with ease. Choose from various options: sm (small), md (medium), lg (large), xl (extra-large), full (full-width), or none (no container).
+Quantum computing is an approach to computation that takes advantage of the <u>[quantum properties](https://www.scientificamerican.com/video/how-does-a-quantum-computer-work/)</u> of materials and particles that dominate at small scales. In classical binary computing, the bit is the basic unit of information, and each bit can be coded as either of two states: 0 or 1. In contrast, quantum bits, or qubits, the basic unit of information for quantum computers, can be in multiple states between 0 and 1 at the same time, a property called superposition (Figure 2).
+![Basics of Quantum Computing](/src/assets/quantum_article_2.png)
+_<small>Fig. 2. Today’s computers use binary bits to convey information. A bit may be in one of two states: off (0) or on (1). In contrast, a qubit can occupy a superposition of states between 0 and 1—thus providing vastly more computational power—at least until it is observed or measured, at which time it collapses to a single state. Credit: Annarita Giani</small>_ 
 
-### Card Template
+Once measured, a qubit “collapses” to a state of 0 or 1—much like how Schrödinger’s famous cat, once observed, is found either alive or not rather than existing as a superposition of both possibilities. Regardless of any later measurement, though, the advantage of superposition is that more states are accessible for computation.
 
-Customize the appearance of your content cards by selecting either the grid or flex option. Grid presents a square block with a background image, while flex displays the image above the text for a distinct look.
+Two classical bits can occupy 2^2 = 4 different configurations (i.e., 00, 11, 01, or 10), but only one of those configurations at a time can be used for computation. Two qubits, on the other hand, can occur in combinations of these four configurations at the same time, and all of them can be used simultaneously to enable far more rapid parallel calculations. This advantage grows exponentially with more qubits as the number of available states increases—for n qubits, 2n states are available for computations. With 30 qubits, for example, more than 1 billion configurations are accessible.
 
-### Hero Template
 
-Tailor your hero section by choosing between an image or plain background.
+### A variety of technologies
 
-### Hero Surface
+A qubit is an abstract mathematical model for information that must be physically implemented in hardware. <u>[Many different hardware approaches](https://www.forbes.com/sites/moorinsights/2019/09/16/quantum-computer-battle-royale-upstart-ions-versus-old-guard-superconductors/?sh=a31fae12cb80)</u> for creating qubits and pursuing quantum computing are emerging. Companies including IBM, Google, and D-Wave are using superconductors to create qubits and microwave pulses to manipulate the information they hold, whereas IonQ and Honeywell are developing an approach using trapped ions suspended in a vacuum and manipulated with lasers. Intel is building qubits with silicon quantum dots in which the quantum state depends on the spin of an electron in silicon and is manipulating these qubits with microwaves. Elsewhere, researchers are busy working out how to develop photonic quantum computers using light beams and optical circuits <u>[[Andersen, 2021]](https://www.nature.com/articles/d41586-021-00488-z)</u>.
 
-Fine-tune your hero section's appearance further by setting the background color and text color.
+<br></br>
 
-### Hero Image Opacity
+Currently, each of these approaches has advantages and disadvantages in terms of their coherence time (how long information can be kept in the qubits), error rate, difficulty to manipulate, and cost. And with all of them, the fragility of quantum states and the extreme precision needed in their fabrication pose challenges to building a large-scale, fault-tolerant quantum computer—that is, one that can execute programs and produce accurate results despite defects or failures in some hardware or software components. A common challenge for many of the technologies, for example, is the requirement that the qubits be maintained at temperatures close to absolute zero to prevent quantum information from decaying (although photonic technologies do not require such low temperatures).
 
-Adjust the opacity of your hero image to enhance text readability. The default value is set at 70%, but you can modify it to suit your needs.
+![Basics of Quantum Computing](/src/assets/quantum_article_3.jpeg)
 
-### Custom Classes
+_<small>The square-shaped processing unit for a quantum computer is suspended below the cryogenic refrigeration apparatus needed to keep the processor at the ultracold temperature at which it functions. Credit: D-Wave</small>_
+<br></br>
 
-Personalize each page by adding custom classes to different sections. These can be Tailwind classes or your own custom styles. Here's how you can apply them:
+Verifying and benchmarking the performance of quantum computers is challenging for many reasons. For example, the wide variety of quantum hardware being developed and the different rates at which these technologies will develop make it difficult for a “snapshot” assessment at a given point in time to predict how these technologies will perform. Also, the strength of each hardware implementation depends greatly on how it is applied, and comparisons with classical computing approaches are not obvious because classical algorithms are also advancing. Implementing communication and control measures to ensure that operations occur accurately and that information can be moved from place to place is also challenging <u>[[Franklin and Chong, 2004]](https://link.springer.com/chapter/10.1007/1-4020-8068-9_8)</u>.
 
-- **Page Class:** Add a class to the `**<body>**` element.
-- **Hero Class:** Add a class to the hero element.
-- **Content Class:** Add a class to the main markdown content of the page.
-- **Block Class:** Add a class to sections within the page builder.
+### Finding the right problems
 
-### Blog, Shop, Menu & Work Settings
+Building quantum computers is monumentally difficult in and of itself, but we must do more than build them to realize their benefits. Quantum computers are not universally better at all tasks than conventional computers—they are merely different, and that difference can, in some cases, be leveraged to do amazing things. And as with conventional computing, quantum computing requires careful attention to the design of software and algorithms for specific purposes and problems. As a result, a key challenge for quantum computing researchers is to identify promising applications in which the important problems are well matched to the strengths of quantum computers and for which software and algorithms can be crafted to capitalize on these strengths (Table 1).
+<br></br>
+<br></br>
 
-Customize the appearance and functionality of your collections using these settings. For example, if you want to modify your blog's style, follow these steps:
+_<small>Table 1. Examples of How Quantum Computing Could Help to Address Climate Change- and Energy-Related Challenges</small>_
+| **Category**                             	| **Challenge**                                                                                                                                        	| **Potential Benefits of Quantum Computing**                                                                                                                                                                                               	|
+|------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Climate modeling and weather forecasting 	| Meeting computational needs as the complexity and resolution of simulation and forecasting models grow                                               	| Greater capability to solve fluid dynamics–based simulations could facilitate model improvements, allowing clearer understanding of likely future conditions and improving mitigation and adaptation planning.                            	|
+| Grid safety and resilience               	| Ensuring power generation facilities are robust and reliable in the future                                                                           	| Enhanced weather and climate models could allow for safer siting of infrastructure, and quantum optimization can be applied to improve the design of new resources like wind farms.                                                       	|
+| Grid management                          	| Scheduling and dispatching resources to match supply and demand, especially as the number and distribution of generators (e.g., wind and solar) grow 	| Quantum optimization could help create cost-effective management solutions and could lower consumer prices by improving operating conditions (e.g., by solving alternating current optimal power flow equations).                         	|
+| Quantum chemistry                        	| Evaluating molecular-scale properties and processes of a vast array of materials to foster technology innovation                                     	| Quantum computing could accelerate discovery and development of new energy production (e.g., photovoltaic) and storage (e.g., battery) technologies, as well as improved strategies for climate change mitigation (e.g., carbon capture). 	|
 
-1. Go to SETTINGS > BLOG.
-1. Here, you can configure the title, description, hero intro, items per page (pagination), add hero buttons, set the page style, featured image, and add tags.
+<br></br>
+In particular, well-suited applications will make use of quantum computers’ abilities to explore large, structured spaces of potential solutions. Thus, model <u>[optimization problems](https://eos.org/research-spotlights/balancing-robustness-and-cost-in-hydrological-model-optimization)</u> offer some of the most fertile ground for quantum computing applications. Algorithms for solving optimization problems, which involve finding best fit values for multiple interacting variables in a solution space, can get “stuck” on a localized solution, or optimum, whereas if the algorithm had kept searching, it might have found an even better solution (e.g., a better fit to observed data or a more plausible what-if scenario). Quantum computing can take advantage of “tunneling” effects to break out of local optima and keep searching.
 
-### Tags
+<br></br>
+Optimization applications have led to significant interest in quantum computing as a means of training <u>[machine learning](https://eos.org/opinions/ten-ways-to-apply-machine-learning-in-earth-and-space-sciences)</u> models, which in turn open up a host of <u>[other applications](https://arxiv.org/abs/2206.11937)</u>. Likewise, quantum computers may be naturally suited to solve certain linear algebra problems such as stress analysis and fluid flow, which are also ubiquitous in science and engineering. In general, because the advantages of quantum computing often emerge as the scale of required computations grows, applications for which current computers are struggling to handle the large array of calculations and inputs involved are likely where the biggest value of quantum computing lies. Many examples of such applications are found in Earth science, specifically with respect to studying climate and weather and to improving our use of energy resources.
 
-Tags play a significant role in organizing your content. Each tag also functions as a landing page, allowing you to provide unique titles, descriptions, images, and more. Additionally, you can override the page style for each tag. In the case of a webshop, categories serve a similar purpose instead of tags.
 
-Enhance your website's visual appeal and functionality with these flexible customization options. Tailor your pages, sections, and content to create a unique online presence that aligns with your brand and vision.
+## Benefits in Climate and Energy Applications
+
+Quantum computing may be especially useful in applications involving fluid dynamics–based problems and simulations, such as those in climate modeling and weather forecasting. Approaches have been developed to apply quantum computing to the nonlinear differential equations that are key for working on fluid dynamics problems <u>[[Lubasch et al., 2020]](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)</u>.
+
+Improvements in both near-term weather forecasting and longer-term climate predictions achieved with quantum computing could benefit the resilience and reliability of energy systems. Weather forecasts are increasingly important for managing variable wind and solar power sources, and clearer predictions of climate could allow for better siting of power generation infrastructure away from areas expected to be affected in the future by, for example, increased flooding or wildfires. Furthermore, quantum optimization techniques can be repurposed to design and operate generating facilities like wind farms more efficiently, for instance, through the optimization of turbine layouts to minimize wake effects and maximize energy production.
+
+Another broad category of interest is the simulation of fundamental chemistry processes, which are innately quantum in nature because of the atomic scale at which the physics involved occurs. Chemistry simulations enabled by quantum computers could help us understand <u>[[large complex molecules]](https://link.springer.com/content/pdf/10.1140/epjqt/s40507-021-00091-1)</u> and allow for better design of chemicals and processes relevant to the energy industry. Such molecules could, for example, aid in developing processes for carbon capture or the electrolysis of water or in designing photovoltaic materials <u>[[Almosni et al., 2018]](https://www.tandfonline.com/doi/full/10.1080/14686996.2018.1433439)</u> or energy storage technology <u>[[Rice et al., 2021]](https://pubs.aip.org/aip/jcp/article-abstract/154/13/134115/1065544/Quantum-computation-of-dominant-products-in?redirectedFrom=fulltext)</u>.
+
+There is also major interest in using quantum computing to improve energy management, specifically the scheduling and dispatch of generation resources on the power grid. One question of interest is whether quantum computers can find optimal solutions to alternating current optimal power flow (ACOPF) equations. These equations help to determine the best operating levels for electric power plants that allow them to meet electricity demands while minimizing operating costs. Solving ACOPF problems is becoming increasingly difficult as the number of small, variable power generators on the grid—particularly wind and solar generators—increases and presents a scaling issue. Even slightly more optimized ACOPF solutions could potentially save money for consumers and producers and help mitigate climate change by reducing energy waste.
+
+<br></br>
+### Putting Quantum Computing to Use
+
+The deployment of large-scale, fault-tolerant quantum computers is likely still a few years in the future. But while we await that milestone, preparations can be made to develop software and strategies for using these computers to address important problems related to climate and energy.
+
+The quantum computing research community has made significant progress on algorithm development, but collaboration between this community and climate and Earth science researchers with relevant domain knowledge is needed to ensure that development efforts meet the needs of real-world applications. Researchers from both communities must exchange ideas to get a clearer picture of what challenges remain in both fields. Meetings like the IEEE Quantum Week workshop on Quantum Computing Opportunities in Renewable Energy and Climate Change and the Q4Climate workshop represent early efforts to bring together these two communities.
+<br></br>
+Other sectors have important roles to play as well. Governments around the world are providing support by investing in quantum information science [e.g., Giani and Eldredge, 2021], which is crucial for enabling further development. And industry will fill the gaps from pure research to technology development to application in the real world. With cooperation among all these sectors, the coming quantum computing revolution can be brought to bear on the critical climate and energy challenges we face.
+
+
+### References
+<br></br>
+Almosni, S., et al. (2018), Material challenges for solar cells in the twenty-first century: Directions in emerging technologies, Sci. Technol. Adv. Mater., 19(1), 336–369, <u>[https://doi.org/10.1080/14686996.2018.1433439](https://doi.org/10.1080/14686996.2018.1433439)</u>.
+
+<br></br>
+Andersen, U. L. (2021), Photonic chip brings optical quantum computers a step closer, Nature, 591, 40–41, <u>[https://doi.org/10.1038/d41586-021-00488-z](https://doi.org/10.1038/d41586-021-00488-z)</u>.
+
+<br></br>
+Franklin, D., and F. T. Chong (2004), Challenges in reliable quantum computing, in Nano, Quantum and Molecular Computing, pp. 247–266, Springer, New York, <u>[https://doi.org/10.1007/1-4020-8068-9_8](https://doi.org/10.1007/1-4020-8068-9_8)</u>.
+
+<br></br>
+Giani, A., and Z. Eldredge (2021), Quantum computing opportunities in renewable energy, SN Comput. Sci., 2, 393, <u>[https://doi.org/10.1007/s42979-021-00786-3](https://doi.org/10.1007/s42979-021-00786-3)</u>.
+
+<br></br>
+Lubasch, M., et al. (2020), Variational quantum algorithms for nonlinear problems, Phys. Rev. A, 101(1), 010301(R), <u>[https://doi.org/10.1103/PhysRevA.101.010301](https://doi.org/10.1103/PhysRevA.101.010301)</u>.
+
+<br></br>
+Moore, G. (1965), Cramming more components onto integrated circuits, Electronics, 38(8), 114, <u>[newsroom.intel.com/wp-content/uploads/sites/11/2018/05/moores-law-electronics.pdf](newsroom.intel.com/wp-content/uploads/sites/11/2018/05/moores-law-electronics.pdf)</u>.
+
+<br></br>
+Paudel, H. P., et al. (2022), Quantum computing and simulations for energy applications: Review and perspective, ACS Eng. Au, 2(3) 151–196, <u>[https://doi.org/10.1021/acsengineeringau.1c00033](https://doi.org/10.1021/acsengineeringau.1c00033)</u>.
+
+<br></br>
+Rice, J. E., et al. (2021), Quantum computation of dominant products in lithium–sulfur batteries, J. Chem. Phys., 154, 134115, <u>[https://doi.org/10.1063/5.0044068](https://doi.org/10.1063/5.0044068)</u>.
